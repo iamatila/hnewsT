@@ -10,10 +10,11 @@ import (
 	"github.com/CloudyKit/jet/v6"
 	"github.com/alexedwards/scs/postgresstore"
 	"github.com/alexedwards/scs/v2"
+
+	// "github.com/upper/db/v4"
+	_ "github.com/lib/pq"
 	"github.com/upper/db/v4"
 	"github.com/upper/db/v4/adapter/postgresql"
-
-	_ "github.com/lib/pq"
 )
 
 type application struct {
@@ -25,6 +26,8 @@ type application struct {
 	view    *jet.Set
 	session *scs.SessionManager
 }
+
+// Models  models.Models
 
 type server struct {
 	host string
@@ -40,7 +43,8 @@ func main() {
 		url:  "http://localhost:0420",
 	}
 
-	db2, err := openDB("postgres://postgres:postgres@localhost/hackernewstobi?sslmode=disable")
+	db2, err := openDB("postgres://postgres:postgres@localhost/hackernewsyoutube?sslmode=disable")
+	// db2, err := openDB("")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -66,6 +70,7 @@ func main() {
 		infoLog: log.New(os.Stdout, "INFO\t", log.Ltime|log.Ldate|log.Lshortfile),
 		errLog:  log.New(os.Stderr, "ERROR\t", log.Ltime|log.Ldate|log.Llongfile),
 	}
+	// Models:  models.New(upper),
 
 	// init jet template
 	if app.debug {

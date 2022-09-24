@@ -7,7 +7,7 @@ require (
 	github.com/CloudyKit/jet/v6 v6.1.0 // indirect
 	github.com/alexedwards/scs/postgresstore v0.0.0-20220528130143-d93ace5be94b // indirect
 	github.com/alexedwards/scs/v2 v2.5.0 // indirect
-	github.com/go-chi/chi v1.5.4 // indirect
+	// github.com/go-chi/chi v1.5.4 // indirect
 	github.com/go-chi/chi/v5 v5.0.7 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.11.0 // indirect
